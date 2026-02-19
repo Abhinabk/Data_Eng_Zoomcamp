@@ -3,6 +3,7 @@ __pycache__/
 *.py[codz]
 *$py.class
 .venv
+python:3.13.11-slim
 # C extensions
 *.so
 
