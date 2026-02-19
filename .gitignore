@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 .venv
 python:3.13.11-slim
+*.parquet
 # C extensions
 *.so
 
