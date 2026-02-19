@@ -5,6 +5,8 @@ __pycache__/
 .venv
 python:3.13.11-slim
 *.parquet
+.vscode 
+
 # C extensions
 *.so
 
