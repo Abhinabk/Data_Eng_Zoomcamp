@@ -6,7 +6,7 @@ __pycache__/
 python:3.13.11-slim
 *.parquet
 .vscode 
-
+.python-version
 # C extensions
 *.so
 
