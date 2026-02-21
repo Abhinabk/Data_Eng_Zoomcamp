@@ -19,7 +19,7 @@ RUN uv sync --locked
 #copy the pipeline file to run 
 # COPY docker_workshop/pipeline/pipeline.py pipeline.py 
 
-COPY docker_workshop/ingest.py ingest_data.py 
+COPY ingest.py ingest_data.py 
 
 #entry point what to run when docker image runs first 
 ENTRYPOINT [ "python","ingest_data.py" ]
