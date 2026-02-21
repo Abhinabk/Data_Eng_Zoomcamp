@@ -17,11 +17,15 @@ COPY "pyproject.toml" "uv.lock" ".python-version" ./
 RUN uv sync --locked
 
 #copy the pipeline file to run 
-COPY docker_workshop/pipeline/pipeline.py pipeline.py 
+# COPY docker_workshop/pipeline/pipeline.py pipeline.py 
+
+COPY docker_workshop/ingest.py ingest_data.py 
 
 #entry point what to run when docker image runs first 
-ENTRYPOINT [ "python","pipeline.py" ]
+ENTRYPOINT [ "python","ingest_data.py" ]
 
 #docker buld command- docker build -t test:pandas -f docker_workshop/pipeline/Dockerfile .
+#docker build -t taxi_ingest:v001 -f docker_workshop/pipeline/Dockerfile .
+#docker run command- docker run -it taxi_ingest:v001 
 #docker run command- docker run -it test:pandas 10
 
