@@ -1,0 +1,12 @@
+#to build a postgres docker container
+docker run -it --rm \
+  -e POSTGRES_USER="root" \
+  -e POSTGRES_PASSWORD="root" \
+  -e POSTGRES_DB="ny_taxi" \
+  -v ny_taxi_postgres_data:/var/lib/postgresql \
+  -p 5433:5432 \
+  postgres:18
+# changed my port number to 5433 as 5432 was being used by local postgres 
+
+#to run using uv
+uv run pgcli -h localhost -p 5433 -U root -d ny_taxi
