@@ -9,7 +9,7 @@ python:3.13.11-slim
 .python-version
 # C extensions
 *.so
-
+terra/keys/
 # Distribution / packaging
 .Python
 build/
